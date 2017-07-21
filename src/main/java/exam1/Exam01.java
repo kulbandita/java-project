@@ -29,8 +29,13 @@ public class Exam01 {
                 return "Win for Player A";
             }
         }
-        if (scorePlayerB > 3 && scorePlayerB - scorePlayerA == 1) {
-            return "Advantage Player B";
+        if (scorePlayerB > 3) {
+            if (scorePlayerB - scorePlayerA == 1) {
+                return "Advantage Player B";
+
+            } else if (scorePlayerB - scorePlayerA >= 1) {
+                return "Win for Player B";
+            }
         }
 
         if (scorePlayerA == 0 && scorePlayerB == 0) {
