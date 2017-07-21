@@ -21,8 +21,10 @@ public class Exam01 {
             return "Fifteen-Love";
         } else if (scorePlayerA == 2) {
             return "Thirty-Love";
-        } else if(scorePlayerA == 3){
+        } else if (scorePlayerA == 3) {
             return "Forty-Love";
+        } else if (scorePlayerA >= 4) {
+            return "Win for Player A";
         }
 
         return "Love-All";
