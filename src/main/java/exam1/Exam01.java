@@ -18,6 +18,10 @@ public class Exam01 {
 
     public String getScore() {
 
+        if (scorePlayerA == 1 && scorePlayerB == 1) {
+            return "Fifteen-All";
+        }
+
         if (scorePlayerA == 1) {
             return "Fifteen-Love";
         } else if (scorePlayerA == 2) {
