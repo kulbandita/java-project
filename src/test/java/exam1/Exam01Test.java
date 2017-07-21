@@ -29,7 +29,7 @@ public class Exam01Test {
         assertEquals("Thirty-Love", actualResult);
     }
 
-    @Test @Ignore
+    @Test
     public void player_A_win_3_times_should_Forty_Love() {
         exam01.playerAWin();
         exam01.playerAWin();
