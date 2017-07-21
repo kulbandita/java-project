@@ -55,7 +55,7 @@ public class Exam01Test {
         assertEquals("Love-Fifteen", actualResult);
     }
 
-    @Test @Ignore
+    @Test
     public void player_B_win_2_times_should_Love_Thirty() {
         exam01.playerBWin();
         exam01.playerBWin();
