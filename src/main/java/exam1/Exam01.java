@@ -24,6 +24,8 @@ public class Exam01 {
             return "Thirty-All";
         } else if (scorePlayerA == 3 && scorePlayerB == 3) {
             return "Deuce";
+        } else if (scorePlayerA == 4 && scorePlayerB == 4) {
+            return "Deuce";
         }
 
         if (scorePlayerA == 1) {

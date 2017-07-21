@@ -112,7 +112,7 @@ public class Exam01Test {
         assertEquals("Deuce", actualResult);
     }
 
-    @Test @Ignore
+    @Test
     public void player_A_and_B_case_04_should_Deuce() {
         exam01.playerAWin();
         exam01.playerBWin();
