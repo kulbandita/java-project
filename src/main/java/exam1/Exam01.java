@@ -3,6 +3,7 @@ package exam1;
 public class Exam01 {
 
     private int scorePlayerA = 0;
+    private int scorePlayerB = 0;
 
     public Exam01(String firstPerson, String secondPerson) {
     }
@@ -12,10 +13,10 @@ public class Exam01 {
     }
 
     public void playerBWin() {
+        scorePlayerB++;
     }
 
     public String getScore() {
-        int score = 0;
 
         if (scorePlayerA == 1) {
             return "Fifteen-Love";
@@ -25,6 +26,10 @@ public class Exam01 {
             return "Forty-Love";
         } else if (scorePlayerA >= 4) {
             return "Win for Player A";
+        }
+
+        if (scorePlayerB == 1) {
+            return "Love-Fifteen";
         }
 
         return "Love-All";
