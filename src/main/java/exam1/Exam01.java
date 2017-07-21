@@ -34,6 +34,8 @@ public class Exam01 {
             return "Love-Thirty";
         } else if (scorePlayerB == 3) {
             return "Love-Forty";
+        } else if (scorePlayerB >= 4) {
+            return "Win for Player B";
         }
 
         return "Love-All";

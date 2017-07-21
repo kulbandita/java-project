@@ -72,7 +72,7 @@ public class Exam01Test {
         assertEquals("Love-Forty", actualResult);
     }
 
-    @Test @Ignore
+    @Test
     public void player_B_is_winner_should_Win_for_Player_B() {
         exam01.playerBWin();
         exam01.playerBWin();
