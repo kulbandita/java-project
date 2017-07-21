@@ -32,6 +32,8 @@ public class Exam01 {
             return "Love-Fifteen";
         } else if (scorePlayerB == 2) {
             return "Love-Thirty";
+        } else if (scorePlayerB == 3) {
+            return "Love-Forty";
         }
 
         return "Love-All";
