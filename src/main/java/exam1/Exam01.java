@@ -18,7 +18,13 @@ public class Exam01 {
 
     public String getScore() {
 
-        if (scorePlayerA == 1 && scorePlayerB == 1) {
+        String A = "Love";
+        String B = "Love";
+        String dash = "-";
+
+        if (scorePlayerA == 0 && scorePlayerB == 0) {
+            return "Love-All";
+        } else if (scorePlayerA == 1 && scorePlayerB == 1) {
             return "Fifteen-All";
         } else if (scorePlayerA == 2 && scorePlayerB == 2) {
             return "Thirty-All";
@@ -28,27 +34,35 @@ public class Exam01 {
             return "Deuce";
         }
 
-        if (scorePlayerA == 1) {
-            return "Fifteen-Love";
-        } else if (scorePlayerA == 2) {
-            return "Thirty-Love";
-        } else if (scorePlayerA == 3) {
-            return "Forty-Love";
-        } else if (scorePlayerA >= 4) {
-            return "Win for Player A";
+        switch (scorePlayerA) {
+            case 1:
+                A = "Fifteen";
+                break;
+            case 2:
+                A = "Thirty";
+                break;
+            case 3:
+                A = "Forty";
+                break;
+            case 4:
+                return "Win for Player A";
         }
 
-        if (scorePlayerB == 1) {
-            return "Love-Fifteen";
-        } else if (scorePlayerB == 2) {
-            return "Love-Thirty";
-        } else if (scorePlayerB == 3) {
-            return "Love-Forty";
-        } else if (scorePlayerB >= 4) {
-            return "Win for Player B";
+        switch (scorePlayerB) {
+            case 1:
+                B = "Fifteen";
+                break;
+            case 2:
+                B = "Thirty";
+                break;
+            case 3:
+                B = "Forty";
+                break;
+            case 4:
+                return "Win for Player B";
         }
 
-        return "Love-All";
+        return A + dash + B;
     }
 
 }
