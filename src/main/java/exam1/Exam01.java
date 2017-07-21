@@ -25,6 +25,9 @@ public class Exam01 {
         if (scorePlayerA == 4 && scorePlayerB == 3) {
             return "Advantage Player A";
         }
+        if (scorePlayerB == 4 && scorePlayerA == 3) {
+            return "Advantage Player B";
+        }
 
         if (scorePlayerA == 0 && scorePlayerB == 0) {
             return "Love-All";
