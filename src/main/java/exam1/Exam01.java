@@ -17,8 +17,10 @@ public class Exam01 {
     public String getScore() {
         int score = 0;
 
-        if(scorePlayerA == 1){
+        if (scorePlayerA == 1) {
             return "Fifteen-Love";
+        } else if (scorePlayerA == 2) {
+            return "Thirty-Love";
         }
 
         return "Love-All";

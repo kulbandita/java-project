@@ -21,7 +21,7 @@ public class Exam01Test {
         assertEquals("Fifteen-Love", actualResult);
     }
 
-    @Test @Ignore
+    @Test
     public void player_A_win_2_times_should_Thirty_Love() {
         exam01.playerAWin();
         exam01.playerAWin();
