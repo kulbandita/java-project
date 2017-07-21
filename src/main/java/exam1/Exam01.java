@@ -20,6 +20,8 @@ public class Exam01 {
 
         if (scorePlayerA == 1 && scorePlayerB == 1) {
             return "Fifteen-All";
+        } else if (scorePlayerA == 2 && scorePlayerB == 2) {
+            return "Thirty-All";
         }
 
         if (scorePlayerA == 1) {
