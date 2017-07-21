@@ -22,10 +22,10 @@ public class Exam01 {
         String B = "Love";
         String dash = "-";
 
-        if (scorePlayerA == 4 && scorePlayerB == 3) {
+        if (scorePlayerA > 3 && scorePlayerA - scorePlayerB == 1) {
             return "Advantage Player A";
         }
-        if (scorePlayerB == 4 && scorePlayerA == 3) {
+        if (scorePlayerB > 3 && scorePlayerB - scorePlayerA == 1) {
             return "Advantage Player B";
         }
 
