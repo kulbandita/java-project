@@ -36,8 +36,21 @@ public class Exam01 {
         return false;
     }
 
-    public String getScore() {
+    public String convertScore(int scoreValue) {
+        switch (scoreValue) {
+            case 0:
+                return "Love";
+            case 1:
+                return "Fifteen";
+            case 2:
+                return "Thirty";
+            case 3:
+                return "Forty";
+        }
+        return "";
+    }
 
+    public String getScore() {
         if (isAll()) {
             switch (scorePlayerA) {
                 case 0:
@@ -53,29 +66,9 @@ public class Exam01 {
                     score = new StringBuffer("Deuce");
             }
         } else if (isNormal()) {
-            for (int i = 0; i < 2; i++) {
-                int tempScore = 0;
-                if (i == 0) {
-                    tempScore = scorePlayerA;
-                } else {
-                    score.append("-");
-                    tempScore = scorePlayerB;
-                }
-                switch (tempScore) {
-                    case 0:
-                        score.append("Love");
-                        break;
-                    case 1:
-                        score.append("Fifteen");
-                        break;
-                    case 2:
-                        score.append("Thirty");
-                        break;
-                    case 3:
-                        score.append("Forty");
-                        break;
-                }
-            }
+            score.append(convertScore(scorePlayerA));
+            score.append("-");
+            score.append(convertScore(scorePlayerB));
         } else {
             int differentScore = scorePlayerA - scorePlayerB;
             if (differentScore == 1) {
@@ -92,8 +85,6 @@ public class Exam01 {
                 score.append(namePlayerB);
             }
         }
-
         return score.toString();
     }
-
 }
