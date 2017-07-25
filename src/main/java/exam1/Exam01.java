@@ -29,6 +29,13 @@ public class Exam01 {
         return false;
     }
 
+    public boolean isNormal() {
+        if (scorePlayerA <= 3 || scorePlayerB <= 3) {
+            return true;
+        }
+        return false;
+    }
+
     public String getScore() {
 
         if (isAll()) {
@@ -45,7 +52,7 @@ public class Exam01 {
                 default:
                     score = new StringBuffer("Deuce");
             }
-        } else {
+        } else if(isNormal()) {
             for (int i = 0; i < 2; i++) {
                 int tempScore = 0;
                 if (i == 0) {
