@@ -78,12 +78,18 @@ public class Exam01 {
             }
         } else {
             int differentScore = scorePlayerA - scorePlayerB;
-            score = new StringBuffer("Win for ");
-            if (differentScore >= 2) {
+            if (differentScore == 1) {
+                score = new StringBuffer("Advantage ");
+                score.append(namePlayerA);
+            } else if (differentScore == -1) {
+                score = new StringBuffer("Advantage ");
+                score.append(namePlayerB);
+            } else if (differentScore >= 2) {
+                score = new StringBuffer("Win for ");
                 score.append(namePlayerA);
             } else if (differentScore <= -2) {
+                score = new StringBuffer("Win for ");
                 score.append(namePlayerB);
-
             }
         }
 
