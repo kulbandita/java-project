@@ -4,12 +4,14 @@ public class Exam01 {
 
     private String namePlayerA;
     private String namePlayerB;
+    private StringBuffer score;
     private int scorePlayerA = 0;
     private int scorePlayerB = 0;
 
     public Exam01(String firstPerson, String secondPerson) {
         this.namePlayerA = firstPerson;
         this.namePlayerB = secondPerson;
+        score = new StringBuffer();
     }
 
     public void playerAWin() {
