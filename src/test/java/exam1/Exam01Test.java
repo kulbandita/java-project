@@ -38,7 +38,7 @@ public class Exam01Test {
         assertEquals("Forty-Love", actualResult);
     }
 
-    @Test @Ignore
+    @Test
     public void player_A_is_winner_times_should_Win_for_Player_A() {
         exam01.playerAWin();
         exam01.playerAWin();
@@ -72,7 +72,7 @@ public class Exam01Test {
         assertEquals("Love-Forty", actualResult);
     }
 
-    @Test @Ignore
+    @Test
     public void player_B_is_winner_should_Win_for_Player_B() {
         exam01.playerBWin();
         exam01.playerBWin();
@@ -164,7 +164,7 @@ public class Exam01Test {
         assertEquals("Fifteen-Forty", actualResult);
     }
 
-    @Test @Ignore
+    @Test
     public void player_A_is_winner_with_4_1_should_Win_for_Player_A() {
         exam01.playerAWin();
         exam01.playerBWin();
@@ -175,7 +175,7 @@ public class Exam01Test {
         assertEquals("Win for Player A", actualResult);
     }
 
-    @Test @Ignore
+    @Test
     public void player_B_is_winner_with_4_1_should_Win_for_Player_B() {
         exam01.playerAWin();
         exam01.playerBWin();
@@ -208,7 +208,7 @@ public class Exam01Test {
         assertEquals("Thirty-Forty", actualResult);
     }
 
-    @Test @Ignore
+    @Test
     public void player_A_is_winner_with_4_2_should_Win_for_Player_A() {
         exam01.playerAWin();
         exam01.playerBWin();
@@ -220,7 +220,7 @@ public class Exam01Test {
         assertEquals("Win for Player A", actualResult);
     }
 
-    @Test @Ignore
+    @Test
     public void player_B_is_winner_with_4_2_should_Win_for_Player_B() {
         exam01.playerAWin();
         exam01.playerBWin();
@@ -288,7 +288,7 @@ public class Exam01Test {
         assertEquals("Advantage Player B", actualResult);
     }
 
-    @Test @Ignore
+    @Test
     public void player_A_is_winner_with_6_4_should_Win_for_Player_A() {
         exam01.playerAWin();
         exam01.playerBWin();
@@ -305,7 +305,7 @@ public class Exam01Test {
         assertEquals("Win for Player A", actualResult);
     }
 
-    @Test @Ignore
+    @Test
     public void player_B_is_winner_with_6_4_should_Win_for_Player_B() {
         exam01.playerAWin();
         exam01.playerBWin();
@@ -322,7 +322,7 @@ public class Exam01Test {
         assertEquals("Win for Player B", actualResult);
     }
 
-    @Test @Ignore
+    @Test
     public void player_B_is_winner_with_16_14_should_Win_for_Player_B() {
         exam01.playerAWin();
         exam01.playerBWin();
@@ -359,7 +359,7 @@ public class Exam01Test {
         assertEquals("Win for Player B", actualResult);
     }
 
-    @Test @Ignore
+    @Test
     public void player_A_is_winner_with_16_14_should_Win_for_Player_A() {
         exam01.playerAWin();
         exam01.playerBWin();

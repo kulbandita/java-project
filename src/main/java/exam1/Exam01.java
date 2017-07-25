@@ -30,7 +30,7 @@ public class Exam01 {
     }
 
     public boolean isNormal() {
-        if (scorePlayerA <= 3 || scorePlayerB <= 3) {
+        if (scorePlayerA <= 3 && scorePlayerB <= 3) {
             return true;
         }
         return false;
@@ -52,7 +52,7 @@ public class Exam01 {
                 default:
                     score = new StringBuffer("Deuce");
             }
-        } else if(isNormal()) {
+        } else if (isNormal()) {
             for (int i = 0; i < 2; i++) {
                 int tempScore = 0;
                 if (i == 0) {
@@ -76,21 +76,14 @@ public class Exam01 {
                         break;
                 }
             }
-        }
+        } else {
+            int differentScore = scorePlayerA - scorePlayerB;
+            score = new StringBuffer("Win for ");
+            if (differentScore >= 2) {
+                score.append(namePlayerA);
+            } else if (differentScore <= -2) {
+                score.append(namePlayerB);
 
-        if (scorePlayerA > 3) {
-            if (scorePlayerA - scorePlayerB == 1) {
-                return "Advantage Player A";
-            } else if (scorePlayerA - scorePlayerB > 1) {
-                return "Win for Player A";
-            }
-        }
-        if (scorePlayerB > 3) {
-            if (scorePlayerB - scorePlayerA == 1) {
-                return "Advantage Player B";
-
-            } else if (scorePlayerB - scorePlayerA >= 1) {
-                return "Win for Player B";
             }
         }
 
