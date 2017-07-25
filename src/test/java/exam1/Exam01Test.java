@@ -8,7 +8,7 @@ import static org.junit.Assert.assertEquals;
 public class Exam01Test {
     Exam01 exam01 = new Exam01("Player A", "Player B");
 
-    @Test @Ignore
+    @Test
     public void start_game_should_love_all() {
         String actualResult = exam01.getScore();
         assertEquals("Love-All", actualResult);

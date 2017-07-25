@@ -22,8 +22,8 @@ public class Exam01 {
         scorePlayerB++;
     }
 
-    public boolean isLove(){
-        if(scorePlayerA == 0 && scorePlayerB == 0){
+    public boolean isLove() {
+        if (scorePlayerA == 0 && scorePlayerB == 0) {
             return true;
         }
         return false;
@@ -34,6 +34,10 @@ public class Exam01 {
         String A = "Love";
         String B = "Love";
         String dash = "-";
+
+        if (isLove()) {
+            score = new StringBuffer("Love-All");
+        }
 
         if (scorePlayerA > 3) {
             if (scorePlayerA - scorePlayerB == 1) {
@@ -91,7 +95,7 @@ public class Exam01 {
                 return "Win for Player B";
         }
 
-        return A + dash + B;
+        return score.toString();
     }
 
 }
