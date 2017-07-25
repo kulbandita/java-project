@@ -22,13 +22,6 @@ public class Exam01 {
         scorePlayerB++;
     }
 
-    public boolean isLove() {
-        if (scorePlayerA == 0 && scorePlayerB == 0) {
-            return true;
-        }
-        return false;
-    }
-
     public boolean isAll() {
         if (scorePlayerA == scorePlayerB) {
             return true;
@@ -52,6 +45,30 @@ public class Exam01 {
                 default:
                     score = new StringBuffer("Deuce");
             }
+        } else {
+            for (int i = 0; i < 2; i++) {
+                int tempScore = 0;
+                if (i == 0) {
+                    tempScore = scorePlayerA;
+                } else {
+                    score.append("-");
+                    tempScore = scorePlayerB;
+                }
+                switch (tempScore) {
+                    case 0:
+                        score.append("Love");
+                        break;
+                    case 1:
+                        score.append("Fifteen");
+                        break;
+                    case 2:
+                        score.append("Thirty");
+                        break;
+                    case 3:
+                        score.append("Forty");
+                        break;
+                }
+            }
         }
 
         if (scorePlayerA > 3) {
@@ -68,18 +85,6 @@ public class Exam01 {
             } else if (scorePlayerB - scorePlayerA >= 1) {
                 return "Win for Player B";
             }
-        }
-
-        if (scorePlayerA == 0 && scorePlayerB == 0) {
-            return "Love-All";
-        } else if (scorePlayerA == 1 && scorePlayerB == 1) {
-            return "Fifteen-All";
-        } else if (scorePlayerA == 2 && scorePlayerB == 2) {
-            return "Thirty-All";
-        } else if (scorePlayerA == 3 && scorePlayerB == 3) {
-            return "Deuce";
-        } else if (scorePlayerA == 4 && scorePlayerB == 4) {
-            return "Deuce";
         }
 
         return score.toString();

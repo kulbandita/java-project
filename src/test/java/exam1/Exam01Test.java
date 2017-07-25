@@ -14,14 +14,14 @@ public class Exam01Test {
         assertEquals("Love-All", actualResult);
     }
 
-    @Test @Ignore
+    @Test
     public void player_A_win_1_should_Fifteen_Love() {
         exam01.playerAWin();
         String actualResult = exam01.getScore();
         assertEquals("Fifteen-Love", actualResult);
     }
 
-    @Test @Ignore
+    @Test
     public void player_A_win_2_times_should_Thirty_Love() {
         exam01.playerAWin();
         exam01.playerAWin();
@@ -29,7 +29,7 @@ public class Exam01Test {
         assertEquals("Thirty-Love", actualResult);
     }
 
-    @Test @Ignore
+    @Test
     public void player_A_win_3_times_should_Forty_Love() {
         exam01.playerAWin();
         exam01.playerAWin();
@@ -48,14 +48,14 @@ public class Exam01Test {
         assertEquals("Win for Player A", actualResult);
     }
 
-    @Test @Ignore
+    @Test
     public void player_B_win_1_should_Love_Fifteen() {
         exam01.playerBWin();
         String actualResult = exam01.getScore();
         assertEquals("Love-Fifteen", actualResult);
     }
 
-    @Test @Ignore
+    @Test
     public void player_B_win_2_times_should_Love_Thirty() {
         exam01.playerBWin();
         exam01.playerBWin();
@@ -63,7 +63,7 @@ public class Exam01Test {
         assertEquals("Love-Thirty", actualResult);
     }
 
-    @Test @Ignore
+    @Test
     public void player_B_win_3_times_should_Love_Thirty() {
         exam01.playerBWin();
         exam01.playerBWin();
@@ -126,7 +126,7 @@ public class Exam01Test {
         assertEquals("Deuce", actualResult);
     }
 
-    @Test @Ignore
+    @Test
     public void normal_case_01_should_Thirty_Fifteen() {
         exam01.playerAWin();
         exam01.playerBWin();
@@ -135,7 +135,7 @@ public class Exam01Test {
         assertEquals("Thirty-Fifteen", actualResult);
     }
 
-    @Test @Ignore
+    @Test
     public void normal_case_02_should_Fifteen_Thirty() {
         exam01.playerAWin();
         exam01.playerBWin();
@@ -144,7 +144,7 @@ public class Exam01Test {
         assertEquals("Fifteen-Thirty", actualResult);
     }
 
-    @Test @Ignore
+    @Test
     public void normal_case_03_should_Forty_Fifteen() {
         exam01.playerAWin();
         exam01.playerBWin();
@@ -154,7 +154,7 @@ public class Exam01Test {
         assertEquals("Forty-Fifteen", actualResult);
     }
 
-    @Test @Ignore
+    @Test
     public void normal_case_04_should_Fifteen_Forty() {
         exam01.playerAWin();
         exam01.playerBWin();
@@ -186,7 +186,7 @@ public class Exam01Test {
         assertEquals("Win for Player B", actualResult);
     }
 
-    @Test @Ignore
+    @Test
     public void normal_case_05_should_Forty_Thirty() {
         exam01.playerAWin();
         exam01.playerBWin();
@@ -197,7 +197,7 @@ public class Exam01Test {
         assertEquals("Forty-Thirty", actualResult);
     }
 
-    @Test @Ignore
+    @Test
     public void normal_case_06_should_Thirty_Forty() {
         exam01.playerAWin();
         exam01.playerBWin();
