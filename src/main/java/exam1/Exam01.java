@@ -20,6 +20,13 @@ public class Exam01 {
         scorePlayerB++;
     }
 
+    public boolean isLove(){
+        if(scorePlayerA == 0 && scorePlayerB == 0){
+            return true;
+        }
+        return false;
+    }
+
     public String getScore() {
 
         String A = "Love";
