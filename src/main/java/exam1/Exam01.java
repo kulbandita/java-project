@@ -52,18 +52,14 @@ public class Exam01 {
 
     public String getScore() {
         if (isAll()) {
-            switch (scorePlayerA) {
-                case 0:
-                    score = new StringBuffer("Love-All");
-                    break;
-                case 1:
-                    score = new StringBuffer("Fifteen-All");
-                    break;
-                case 2:
-                    score = new StringBuffer("Thirty-All");
-                    break;
-                default:
-                    score = new StringBuffer("Deuce");
+            if (scorePlayerA == 0) {
+                score.append("Love");
+                score.append("-All");
+            } else if (scorePlayerA >= 3) {
+                score.append("Deuce");
+            } else {
+                score.append(convertScore(scorePlayerA));
+                score.append("-All");
             }
         } else if (isNormal()) {
             score.append(convertScore(scorePlayerA));
