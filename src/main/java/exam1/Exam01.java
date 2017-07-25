@@ -1,7 +1,6 @@
 package exam1;
 
 public class Exam01 {
-
     private String namePlayerA;
     private String namePlayerB;
     private StringBuffer score;
@@ -23,14 +22,21 @@ public class Exam01 {
     }
 
     public boolean isAll() {
-        if (scorePlayerA == scorePlayerB) {
+        if (scorePlayerA == scorePlayerB && scorePlayerB < 3) {
             return true;
         }
         return false;
     }
 
     public boolean isNormal() {
-        if (scorePlayerA <= 3 && scorePlayerB <= 3) {
+        if (scorePlayerA != scorePlayerB && scorePlayerA <= 3 && scorePlayerB <= 3) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean isDeuce() {
+        if (scorePlayerA == scorePlayerB && scorePlayerA >= 3 && scorePlayerB >= 3) {
             return true;
         }
         return false;
@@ -52,15 +58,10 @@ public class Exam01 {
 
     public String getScore() {
         if (isAll()) {
-            if (scorePlayerA == 0) {
-                score.append("Love");
-                score.append("-All");
-            } else if (scorePlayerA >= 3) {
-                score.append("Deuce");
-            } else {
-                score.append(convertScore(scorePlayerA));
-                score.append("-All");
-            }
+            score.append(convertScore(scorePlayerA));
+            score.append("-All");
+        } else if (isDeuce()) {
+            score.append("Deuce");
         } else if (isNormal()) {
             score.append(convertScore(scorePlayerA));
             score.append("-");
