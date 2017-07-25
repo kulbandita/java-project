@@ -38,10 +38,6 @@ public class Exam01 {
 
     public String getScore() {
 
-        String A = "Love";
-        String B = "Love";
-        String dash = "-";
-
         if (isAll()) {
             switch (scorePlayerA) {
                 case 0:
@@ -84,34 +80,6 @@ public class Exam01 {
             return "Deuce";
         } else if (scorePlayerA == 4 && scorePlayerB == 4) {
             return "Deuce";
-        }
-
-        switch (scorePlayerA) {
-            case 1:
-                A = "Fifteen";
-                break;
-            case 2:
-                A = "Thirty";
-                break;
-            case 3:
-                A = "Forty";
-                break;
-            case 4:
-                return "Win for Player A";
-        }
-
-        switch (scorePlayerB) {
-            case 1:
-                B = "Fifteen";
-                break;
-            case 2:
-                B = "Thirty";
-                break;
-            case 3:
-                B = "Forty";
-                break;
-            case 4:
-                return "Win for Player B";
         }
 
         return score.toString();
