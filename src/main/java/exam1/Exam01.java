@@ -29,14 +29,33 @@ public class Exam01 {
         return false;
     }
 
+    public boolean isAll() {
+        if (scorePlayerA == scorePlayerB) {
+            return true;
+        }
+        return false;
+    }
+
     public String getScore() {
 
         String A = "Love";
         String B = "Love";
         String dash = "-";
 
-        if (isLove()) {
-            score = new StringBuffer("Love-All");
+        if (isAll()) {
+            switch (scorePlayerA) {
+                case 0:
+                    score = new StringBuffer("Love-All");
+                    break;
+                case 1:
+                    score = new StringBuffer("Fifteen-All");
+                    break;
+                case 2:
+                    score = new StringBuffer("Thirty-All");
+                    break;
+                default:
+                    score = new StringBuffer("Deuce");
+            }
         }
 
         if (scorePlayerA > 3) {
